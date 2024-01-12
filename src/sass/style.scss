@@ -1,0 +1,50 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+body {
+    background: var(--main);
+    font-family: "Rubik", Roboto, Sans-serif;
+    font-size: 16px;
+    overflow-x: hidden; //скроем от анимаций. 
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input, button {
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--white);
+    font-size: 16px;
+    font-family: "Rubik", Roboto, Sans-serif;
+}
+
+
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+
+
+@import 'blocks/colors';
+@import 'blocks/main';
