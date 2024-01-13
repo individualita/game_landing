@@ -45,26 +45,27 @@
         background-color: rgba(14, 15, 17, 0.5);
         
         svg {
-            width: 50px;
-            height: 30px;
             fill: var(--white);
-            transition: transform 0.3s ease;
-            &:hover {
-                transform: scale(1.2);
-            }
         }
         &-ps {
             svg {
                 width: 80px;
                 height: 130px;
             }
-
         }
         &-social {
             display: flex;
             flex-direction: column;
             gap: 30px;
             margin: auto 0;
+            svg {
+                width: 50px;
+                height: 30px;
+                transition: transform 0.6s ease;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
         }
     }
 }
