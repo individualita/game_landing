@@ -1,0 +1,13 @@
+.button {
+    width: 145px;
+    height: 42px;
+    border-radius: 6px;
+    background: var(--violet);
+    text-transform: uppercase;
+    cursor: pointer;
+    &__transparent {
+        background: transparent;
+        border: 1px solid var(--white);
+    }
+    
+}

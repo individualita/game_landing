@@ -1,0 +1,35 @@
+.main {
+    min-height: 100vh;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        /*width: 1363px;*/
+        width: 70%;
+        height: 100%;
+        background: linear-gradient(to right, #1c2023, rgba(28, 32, 35, 0.5), rgba(28, 32, 35, 0.5), #1c2023),
+         url('../img/mai-test-2.jpg') no-repeat center/cover;
+        z-index: -1;
+    }
+    &__wrapper {
+        padding-top: 15rem; // 16px html * 15 = 240px;
+    }
+    h1 {
+        color: var(--white);
+        font-size: 90px;
+        font-weight: 600;
+    }
+    &__descr {
+        width: 580px;
+        margin-top: 25px;
+    }
+    &__btns {
+        display: flex;
+        gap: 30px;
+        margin-top: 15rem;
+    }
+}
+
