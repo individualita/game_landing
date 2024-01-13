@@ -29,7 +29,44 @@
     &__btns {
         display: flex;
         gap: 30px;
-        margin-top: 15rem;
+        margin-top: 10rem;
+    }
+
+    &__icons {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(14, 15, 17, 0.5);
+        
+        svg {
+            width: 50px;
+            height: 30px;
+            fill: var(--white);
+            transition: transform 0.3s ease;
+            &:hover {
+                fill: var(--violet);
+                transform: scale(1.2);
+            }
+        }
+        &-ps {
+            svg {
+                width: 80px;
+                height: 130px;
+            }
+
+        }
+        &-social {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: auto 0;
+        }
     }
 }
 

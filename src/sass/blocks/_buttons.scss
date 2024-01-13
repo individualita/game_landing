@@ -1,13 +1,25 @@
 .button {
-    width: 145px;
-    height: 42px;
+    width: 96px;
+    height: 30px;
     border-radius: 6px;
-    background: var(--violet);
+    background: linear-gradient(135deg, #8856d9, #412771);
     text-transform: uppercase;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
+    &:hover {
+        box-shadow: 0 4px 8px rgba(136, 86, 217, 0.3);
+        transform: translateY(-2px);
+    }
+    &__main {
+        width: 145px;
+        height: 42px;
+    }
     &__transparent {
         background: transparent;
         border: 1px solid var(--white);
+        &:hover {
+            box-shadow: 0 4px 8px rgba(136, 86, 217, 0.3);
+        }
     }
     
 }
