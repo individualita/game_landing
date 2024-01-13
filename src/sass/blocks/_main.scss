@@ -50,7 +50,6 @@
             fill: var(--white);
             transition: transform 0.3s ease;
             &:hover {
-                fill: var(--violet);
                 transform: scale(1.2);
             }
         }
