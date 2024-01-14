@@ -1,0 +1,42 @@
+.headphones {
+    padding-top: 3.5rem;
+    &__wrapper {
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        gap: 150px;
+    }
+    &__content {
+        flex-basis: 425px;
+        padding-top: 2.3rem;
+        font-size: 18px;
+    }
+    p + p {
+        margin-top: 22px;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+    &__price {
+        font-weight: 700;
+        font-size: 30px;
+        color: var(--white);
+    }
+    &__image {
+        width: 340px;
+        height: 300px;
+        img {
+            object-fit: cover;
+        }
+    }
+}
+
+.violet {
+    color: var(--violet);
+}
+
+.orange {
+    color: var(--orange);
+}
