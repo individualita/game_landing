@@ -17,13 +17,17 @@
         background: linear-gradient(180deg, #141615 0%, #1C2023 100%);
         border-radius: 6px;
         padding: 17px;
+        transition: 0.5s all;
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 1px 1px 20px var(--violet);
+        }
         img {
             object-fit: cover;
             height: 173px;
             border-radius: 6px;
             width: 100%;
         }
-
     }
     &__title {
         color: var(--white);
@@ -52,3 +56,6 @@
         font-weight: 700;
     }
 }
+
+
+

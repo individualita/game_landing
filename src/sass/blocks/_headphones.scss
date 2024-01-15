@@ -25,10 +25,24 @@
         color: var(--white);
     }
     &__image {
+        position: relative;
         width: 340px;
         height: 300px;
+        &::before {
+            content: '';
+            display: block;
+            width: 195px;
+            height: 119px;
+            background: rgba(79, 96, 152, 0.8);
+            filter: blur(75px); //заблюриваем квадратик
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         img {
             object-fit: cover;
+            animation: gravitation 1.5s linear infinite alternate;
         }
     }
 }
@@ -39,4 +53,13 @@
 
 .orange {
     color: var(--orange);
+}
+
+@keyframes gravitation {
+    0% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
