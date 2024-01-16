@@ -25,9 +25,24 @@
         font-size: 13px;
     }
     &__headphones {
-        background: var(--orange);
+        background: linear-gradient(135deg, #ff4136, #810700);
         width: 274px;
         height: 46px;
+        &:hover {
+            box-shadow: 0 4px 8px rgba(255, 65, 54, 0.3);
+        }
+    }
+    &__orange {
+        background: linear-gradient(135deg, #ff4136, #810700);
+        &:hover {
+            box-shadow: 0 4px 8px rgba(255, 65, 54, 0.3);
+        }
+
+    }
+    &__explore {
+        margin-top: 35px;
+        font-size: 13px;
+        font-size: 16px;
     }
     
 }

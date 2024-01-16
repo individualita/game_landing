@@ -1,6 +1,10 @@
 .about {
     padding-top: 4rem;
     iframe {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 500px;
         margin-top: 40px;
     }
 }
