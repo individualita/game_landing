@@ -1,0 +1,112 @@
+.news {
+    padding-top: 6.5rem;
+    &__item {
+        width: 615px;
+        max-height: 346px;
+        padding: 20px;
+        background: linear-gradient(178deg, #30373F 41.63%, #141615 185.57%);
+        border-radius: 6px;
+        /*overflow: hidden;*/
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__subtitle {
+        color: var(--violet);
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__date {
+        color: var(--grey);
+        font-size: 10px;
+        line-height: 17px;
+    }
+    &__title {
+        color: var(--white);
+        font-size: 19px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__content {
+        padding-top: 15px;
+        display: flex;
+        //flex-wrap: wrap;
+        gap: 24px;
+        position: relative;
+    }
+    &__image {
+        width: 278px;
+        height: 248px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    }
+    &__description {
+        width: 256px;
+        max-height: 208px;
+        overflow-y: auto;
+        color: #D9D9D9;
+        font-size: 12px;
+        line-height: 17px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__button {
+        display: block;
+        width: 96px;
+        height: 30px;
+        background: var(--grey);
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 6px;
+        text-align: center;
+        padding: 6px 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        &:hover{
+            text-decoration: none;
+            color: var(--white);
+        }
+    }
+}
+
+.slider {
+    &__btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        background-color: var(--grey);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(50%);        
+        z-index: 1;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0 4px 8px rgba(136, 86, 217, 0.3);
+        }
+        &-next {
+            background-color: var(--violet);
+            right: 5px;
+        }
+        &-prev {
+            left: 5px;
+        }
+    };
+}
+
+
+.swiper {
+    margin-top: 40px;
+}
