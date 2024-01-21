@@ -1,0 +1,66 @@
+.faq {
+    padding-top: 6.7rem;
+    &__wrapper {
+        margin-top: 40px;
+    }
+    &__item {
+        margin-bottom: 40px;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid var(--violet);
+        padding-bottom: 6px;
+    }
+    &__question {
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--white);
+    }
+    &__answer {
+        display: none;
+        margin-top: 13px;
+        font-size: 14px;
+        &-active {
+            display: block;
+        }
+    }
+    &__button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+        background: linear-gradient(135deg, #8c96a0, #3b4f4a);
+        position: relative;
+        cursor: pointer;
+        &::before,
+        &::after  {
+            content: '';
+            width: 14px;
+            height: 2px;
+            background-color: var(--white);
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.8s ease;
+
+        }
+        &::before {
+            top: 15px;
+            
+        }
+        &::after {
+            bottom: 13px;
+            transform: translate(-50%, -50%) rotate(90deg);
+            
+        }
+        &-active {
+            &::before {
+                transform: translateX(-50%) rotate(-45deg);
+            }
+            &::after {
+                transform: translateX(-50%) rotate(45deg);
+            }
+        }
+    }
+}

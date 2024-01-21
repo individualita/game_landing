@@ -61,7 +61,7 @@
         display: block;
         width: 96px;
         height: 30px;
-        background: var(--grey);
+        background: linear-gradient(135deg, #8c96a0, #3b4f4a);
         color: var(--white);
         font-size: 13px;
         font-weight: 500;
@@ -84,7 +84,7 @@
         width: 32px;
         height: 32px;
         border-radius: 6px;
-        background-color: var(--grey);
+        background: var(--grey);
         display: flex;
         align-items: center;
         justify-content: center;
