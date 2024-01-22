@@ -1,19 +1,36 @@
 .header {
     position: fixed;
-    z-index: 1;
-    top: 0;
+    z-index: 5;
+    top: 45px;
     right: 0;
     left: 0;
-    padding-top: 45px;
+    &.opened { //когда у хедера будет класс opened: 
+        .hamburger {
+            &::before,
+            &::after {
+                width: 50%;
+            }
+            span {
+                width: 100%;
+            }
+        }
+        .nav {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 1s, transform 1s;
+        }
+    }
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap: 100px;
     }
 }
 
 .nav {
-    margin-right: 20%;
+    transform: translateX(-200%);
+    opacity: 0;
+    transition: transform 1s ease;
     &__list {
         display: flex;
         justify-content: space-between;
@@ -61,6 +78,15 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            cursor: pointer;
+            &:hover {
+                +.nav__languages { //при наведении на lang у nav__languages появляется класс block. + (соседний элемент). 
+                    display: block;
+                }
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
 
             &:hover::after,
             &:hover::before  { //уберем свойства у последнего элемента
@@ -69,13 +95,35 @@
 
             svg {
                 fill: var(--white);
-                cursor: pointer;
+                &:hover {
+                    transition: all 1s ease;
+                }
             }
         }
     }
     &__languages {
-        display: none;
-        transform: translateY(-100%);
+       display: none;
+       padding: 10px 15px;
+       background: var(--dark);
+       border-radius: 6px;
+       position: absolute;
+       top: 100%;
+       &:hover {
+        display: block;
+       }
+    }
+    &__language {
+        + .nav__language {
+            margin-top: 8px; //отступ для второго элемента
+        } 
+        font-weight: 500;
+        font-size: 14px;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.5);
+        &:hover {
+            color: var(--violet);
+        };
+        
     }
 }
 
@@ -91,6 +139,7 @@
         background-color: var(--white);
         height: 1px;
         margin-top: 8px;
+        transition: width .8s ease;
     }
     &::before,
     &::after {
@@ -99,6 +148,7 @@
         height: 1px;
         width: 100%;
         position: absolute;
+        transition: width .8s ease;
     }
     &::before {
         top: 0;
@@ -106,4 +156,13 @@
     &::after {
         bottom: 0;
     }
+    /*&.active {
+        &::before,
+        &::after {
+            width: 50%;
+        }
+        span {
+            width: 100%;
+        }
+    } */
 }

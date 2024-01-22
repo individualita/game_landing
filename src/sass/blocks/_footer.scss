@@ -1,0 +1,42 @@
+.footer {
+    padding: 10rem 0 1rem;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background:
+        linear-gradient(to bottom, #1c2023, rgba(28, 32, 35, 0.1)),
+        linear-gradient(to right, #1c2023, rgba(0, 0, 0, 0.4), rgba(28, 32, 35, 0.5)),
+        url('../img/footerhand.webp') no-repeat center/cover;
+        z-index: -1;
+    }
+    &__wrapper {
+        text-align: center;
+    }
+    &__info {
+        font-size: 14px;
+        color: var(--grey);
+    }
+    &__icon {
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        img {
+            width: 46px;
+            height: 35px;
+        }
+        span {
+            color: var(--grey);
+        }
+    }
+    &__rights {
+        margin-top: 15px;
+    }
+}
