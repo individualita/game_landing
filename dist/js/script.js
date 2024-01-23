@@ -15,4 +15,16 @@ const swiper = new Swiper('.swiper', {
 
 });
 
+
+const classes = { //равно строке opened. 
+  opened: 'opened'
+}
+
+
+
+const toggleMenu = () => {
+
+}
+
 const menuButton = document.querySelector('.hamburger');
+menuButton.addEventListener('click', toggleMenu);

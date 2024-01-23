@@ -22,8 +22,6 @@
     }
     &__wrapper {
         display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
     }
 }
 
@@ -36,6 +34,7 @@
         justify-content: space-between;
         gap: 35px;
         font-size: 14px;
+        margin-left: 100px;
     }
     &__link {
         text-transform: uppercase;
