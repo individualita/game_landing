@@ -2,7 +2,8 @@
     padding-top: 6.5rem;
     &__item {
         width: 615px;
-        max-height: 346px;
+        //max-height: 346px;
+        min-height: 346px;
         padding: 20px;
         background: linear-gradient(178deg, #30373F 41.63%, #141615 185.57%);
         border-radius: 6px;

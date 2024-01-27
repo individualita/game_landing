@@ -10,7 +10,17 @@
         display: flex;
         justify-content: space-between;
         border-bottom: 2px solid var(--violet);
-        padding-bottom: 6px;
+        padding: 10px 6px 6px;
+        background-color: rgba(20, 20, 20, 0.2);
+        border-radius: 6px;
+        cursor: pointer;
+        &.opened {
+            .faq__button {
+                &::before {
+                    transform: rotate(45deg);
+                }
+            }
+        }
     }
     &__question {
         font-size: 17px;
@@ -18,12 +28,14 @@
         color: var(--white);
     }
     &__answer {
-        height: 0;
+        max-height: 0;
         opacity: 0;
         transition: height .25s, opacity .25s;
         margin-top: 13px;
         font-size: 14px;
-        &-opened {
+        transition: all 1s ease;
+        &.opened {
+            max-height: 200px;
             opacity: 1;
         }
     }
@@ -81,11 +93,11 @@
             transition: transform 0.25s;
 
         }
-        &-active {
+        /*&-active {
             &::before {
                 transform: rotate(45deg);
             }
             
-        }
+        }*/
     }
 }

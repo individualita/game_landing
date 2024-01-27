@@ -83,6 +83,7 @@
                     display: block;
                 }
                 svg {
+                    transition: .7s ease;
                     transform: rotate(180deg);
                 }
             }
@@ -94,9 +95,6 @@
 
             svg {
                 fill: var(--white);
-                &:hover {
-                    transition: all 1s ease;
-                }
             }
         }
     }

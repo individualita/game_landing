@@ -19,7 +19,8 @@ const swiper = new Swiper('.swiper', {
 
 
 const classes = { //равно строке opened. 
-  opened: 'opened'
+  opened: 'opened',
+  active: 'active'
 }
 
 const menuButton = document.querySelector('.hamburger');
@@ -54,8 +55,9 @@ const scrollToSection = (e) => {
 
   const href = e.currentTarget.getAttribute('href');
   if (!href || !href.startsWith('#')) return;
-
+  
   const section = document.querySelector(href);
+  
   if (!section) return;
 
   section.scrollIntoView({ behavior: 'smooth'});
@@ -64,8 +66,63 @@ const scrollToSection = (e) => {
 };
 
 
+
+
 menuButton.addEventListener('click', toggleMenu);
 
 navLink.forEach(link => { //это массив, на каждый элемент навешываем событие. 
   link.addEventListener('click', scrollToSection)
 }); 
+
+
+
+
+
+
+const faqHeader = document.querySelectorAll('.faq__header');
+const faqAnswer = document.querySelectorAll('.faq__answer');
+
+
+/*Реализация без закрытия остальных айтемов. 
+
+function toggleAccordion() {
+  const answerElement = this.nextElementSibling;
+  this.classList.toggle(classes.opened);
+  answerElement.classList.toggle(classes.opened);
+} */
+
+
+function toggleAccordion() {
+  const isOpened = this.classList.contains(classes.opened);
+  const answerElement = this.nextElementSibling;
+
+
+  // Закрываем все элементы перед открытием текущего
+  faqHeader.forEach(header => {
+    //Если текущий элемент не равен элементу, на который кликнули (this), то удаляются классы opened у элемента заголовка (header) и следующего элемента (ответа).
+    if (header !== this) {      
+      header.classList.remove(classes.opened);
+      header.nextElementSibling.classList.remove(classes.opened);
+    }
+  });
+
+  // Открываем текущий элемент, если закрыт, и закрываем, если открыт
+  if (!isOpened) {
+    this.classList.add(classes.opened);
+    answerElement.classList.add(classes.opened);
+
+    
+  } else {
+    this.classList.remove(classes.opened);
+    answerElement.classList.remove(classes.opened);
+  }
+
+}
+
+faqHeader.forEach(function(header) {
+  header.addEventListener('click', toggleAccordion);
+});
+
+
+
+
