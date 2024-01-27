@@ -103,18 +103,21 @@ function toggleAccordion() {
     if (header !== this) {      
       header.classList.remove(classes.opened);
       header.nextElementSibling.classList.remove(classes.opened);
+      header.nextElementSibling.style.maxHeight = null;
     }
+    
   });
 
   // Открываем текущий элемент, если закрыт, и закрываем, если открыт
   if (!isOpened) {
     this.classList.add(classes.opened);
     answerElement.classList.add(classes.opened);
-
+    answerElement.style.maxHeight = answerElement.scrollHeight + 'px';
     
   } else {
     this.classList.remove(classes.opened);
     answerElement.classList.remove(classes.opened);
+    
   }
 
 }

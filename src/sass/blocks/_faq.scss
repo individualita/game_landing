@@ -2,17 +2,15 @@
     padding-top: 6.7rem;
     &__wrapper {
         margin-top: 40px;
-    }
-    &__item {
-        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
     &__header {
         display: flex;
         justify-content: space-between;
         border-bottom: 2px solid var(--violet);
         padding: 10px 6px 6px;
-        background-color: rgba(20, 20, 20, 0.2);
-        border-radius: 6px;
         cursor: pointer;
         &.opened {
             .faq__button {
@@ -28,15 +26,18 @@
         color: var(--white);
     }
     &__answer {
+        font-size: 14px;
         max-height: 0;
         opacity: 0;
-        transition: height .25s, opacity .25s;
-        margin-top: 13px;
-        font-size: 14px;
-        transition: all 1s ease;
+        transition: all .8s ease-out;
+        padding-top: 0;
+        will-change: max-height;
+        overflow: hidden;
+        box-sizing: content-box;
         &.opened {
             max-height: 200px;
             opacity: 1;
+            padding-top: 13px;
         }
     }
     /*&__button {
@@ -90,7 +91,7 @@
             content: '+';
             font-size: 27px;
             color: var(--white);
-            transition: transform 0.25s;
+            transition: all .8s ease-out;
 
         }
         /*&-active {
