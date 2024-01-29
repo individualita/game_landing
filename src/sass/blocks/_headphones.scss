@@ -70,6 +70,10 @@
             display: flex;
             gap: 5px;
         }
+        &-text {
+            color: var(--white);
+            font-weight: 500;
+        }
         &-btn {
             width: 20px;
             height: 20px;
