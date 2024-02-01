@@ -16,6 +16,7 @@
         display: flex;
         gap: 15px;
         justify-content: center;
+        align-items: center;
         margin-top: 25px;
         &-checkbox {
             width: 54px;
@@ -53,7 +54,7 @@
             font-size: 14px;
             line-height: 17px;
             color: var(--dark);
-            &-active {
+            &.active {
                 color: var(--white);
             }
         }
@@ -68,6 +69,7 @@
         &-reverse {
             flex-direction: row-reverse;
         }
+
     }
     &__img {
         flex-basis: 415px;
@@ -107,7 +109,7 @@
         font-weight: 400;
         line-height: 36px;
         color: var(--white);
-        &-active {
+        &.active {
             display: flex;
         }
     }

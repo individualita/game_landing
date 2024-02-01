@@ -133,7 +133,7 @@ const headphonesImages = document.querySelectorAll('.headphones__image');
 const headphonesBtns = document.querySelectorAll('.choose__color-btn');
 
 
-function chooseColor() {
+function changeHeadphonesColor () {
 const selectedColor = this.getAttribute('data-color'); //находим цвет на который кликнули. 
 
 //убираем все активные классы фото. 
@@ -148,5 +148,68 @@ selectedImage.classList.add(classes.active);
 
 
 headphonesBtns.forEach(function(btn) {
-btn.addEventListener('click', chooseColor);
+btn.addEventListener('click', changeHeadphonesColor);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const checkboxes = {
+  requirements: ["minimum", "recommended"],
+  versions: ["standard", "limited"]
+}
+
+
+const inputCheckBoxes = document.querySelectorAll('.checkbox');
+
+
+function handleCheckBox () {
+  const name = this.name; // 1 инпут - 'requirements'  2 инпут - 'versions'
+  const isChecked = this.checked; //true false 
+
+
+  const value = checkboxes[name][Number(isChecked)]; // здесь в нейм лежит строка, либо requirements либо versions. То есть по сути запись равна checkbox["requirements"] либо checkbox["versions"] и таким образом динамически выбираем свойства объекта в зависимости от переменной. 
+  //isChecked по сути это либо тру, либо фолс. Можно перевести в 0 или 1, соотвественно 0 - minimum, 1 - recommended. 
+  
+
+
+  const list = document.getElementById(value); // UL id= minimum ; id recommended. 
+
+  
+  const tabs = document.querySelectorAll(`[data-${name}]`); //text minimum/recomended . data-versions; data-requirements. 
+  
+  const siblings = list.parentElement.children;
+
+  console.log(siblings);
+
+  for (const item of siblings) item.classList.remove(classes.active); //удаляем класс активности у всех детей. UL
+
+
+  for (const tab of tabs) { //класс активности для табов.
+    tab.classList.remove(classes.active);
+    tab.dataset[name] === value && tab.classList.add(classes.active);
+  }
+
+
+  list.classList.add(classes.active); //даём класс активности UL 
+
+}
+
+
+inputCheckBoxes.forEach(function(checkbox) {
+  checkbox.addEventListener('click', handleCheckBox)
+});
+
+
+
+
