@@ -472,7 +472,45 @@
             </div>
         </div>
     </footer>
+    <div class="overlay opened ">
+        <div class="modal opened">
+            <div class="modal__wrapper">
+                <div class="modal__close">x</div>
+                <div class="modal__title">The Last Of Us 2</div>
+                <div class="modal__edition">standard edition</div>
 
+                <form class="modal__form" action="#">
+                    <div class="form__group full">
+                        <label for="card">credit card:</label>
+                        <input name ="card" type="text" id="card" required placeholder="0000 0000 0000 0000"> 
+                    </div>
+                    <div class="form__group">
+                        <label for="expire">expire:</label>
+                        <input name ="expire" type="text" id="expire" required placeholder="mm/yy">
+                    </div>
+                    <div class="form__group">
+                        <label for="ccv">ccv:</label>
+                        <input name ="expire" type="text" id="ccv" required placeholder="***">
+                    </div>
+                    <div class="form__checkbox">
+                        <label for="agreement">I agree with the <span class="orange">rules</span> of the site</label>
+                        <input type="checkbox" name="agreement" id="agreement" required>
+                        <span class="check"></span>
+                    </div>
+
+                    <div class="modal__description">
+                        Download of this product is subject to the PlayStation Network Terms of Service and our Software Usage Terms plus any specific additional conditions applying to this product. If you do not wish to accept these terms, do not download this product. See Terms of Service for more important information.
+                    </div>
+
+                    <div class="modal__total">
+                        <div class="modal__total-text">Your total sum:</div>
+                        <div class="modal__total-price">19.99$</div>
+                    </div>
+                    <button class="button button__modal" type="submit">buy now</button>
+                </form>
+            </div>
+        </div>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>

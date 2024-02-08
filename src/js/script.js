@@ -134,16 +134,16 @@ const headphonesBtns = document.querySelectorAll('.choose__color-btn');
 
 
 function changeHeadphonesColor () {
-const selectedColor = this.getAttribute('data-color'); //находим цвет на который кликнули. 
+  const selectedColor = this.getAttribute('data-color'); //находим цвет на который кликнули. 
 
-//убираем все активные классы фото. 
-headphonesImages.forEach(function(image) {
-  image.classList.remove(classes.active);
-});
+  //убираем все активные классы фото. 
+  headphonesImages.forEach(function(image) {
+    image.classList.remove(classes.active);
+  });
 
-const selectedImage = document.querySelector(`.headphones__image[data-color="${selectedColor}"]`);
+  const selectedImage = document.querySelector(`.headphones__image[data-color="${selectedColor}"]`);
 
-selectedImage.classList.add(classes.active);
+  selectedImage.classList.add(classes.active);
 }
 
 
