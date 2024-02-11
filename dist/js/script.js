@@ -190,7 +190,6 @@ function handleCheckBox () {
   
   const siblings = list.parentElement.children;
 
-  console.log(siblings);
 
   for (const item of siblings) item.classList.remove(classes.active); //удаляем класс активности у всех детей. UL
 
@@ -209,6 +208,67 @@ function handleCheckBox () {
 inputCheckBoxes.forEach(function(checkbox) {
   checkbox.addEventListener('click', handleCheckBox)
 });
+
+
+
+
+
+
+//модалки. Добавили для каждой кнопки класс data-buy и атрибут. 
+
+
+
+
+const editionValues = [
+  {
+    price: 17.99,
+    title: "Standard Edition",
+  },
+  {
+    price: 19.99,
+    title: "Standard Edition New Generation",
+  },
+  {
+    price: 29.99,
+    title: "Digital Deluxe Edition",
+  }
+];
+
+
+const buyButton = document.querySelectorAll('.buy-button');
+const modal = document.querySelector('.modal'); 
+const modalTitle = document.querySelector('.modal__edition'); 
+const modalPrice = document.querySelector('.modal__total-price');
+const modalClose = document.querySelector('.modal__close');
+const overlay = document.querySelector('.overlay');
+
+
+const handleBuyButton = (event) => {
+  const value = event.target.dataset.value; // 0 1 2 buttons
+  //const alternativeValue = event.target.getAttribute('data-value'); альтернативный способ. 
+
+  if(!value) return; //если value нет, код останавливается. 
+
+  //деструктуризация. Получаем константу price и values исходя из массива editionValues[value]; Обращение по индексу [0, 1, 2]
+  const {price, title} = editionValues[value]; 
+
+  modalTitle.innerText = title;
+  modalPrice.innerText = `${price} $`;
+  overlay.classList.add(classes.opened);
+  modal.classList.add(classes.opened);
+}
+
+function closeModal () {
+  modal.classList.remove(classes.opened);
+  overlay.classList.remove(classes.opened);
+}
+
+buyButton.forEach(function(btn) {
+  btn.addEventListener('click', handleBuyButton);
+  
+})
+
+modalClose.addEventListener('click', closeModal);
 
 
 
