@@ -51,16 +51,16 @@ window.scrollTo({ top, behavior: "smooth"}); // Прокручиваем стр�
 */
 
 const scrollToSection = (e) => {
-e.preventDefault();
+  e.preventDefault();
 
-const href = e.currentTarget.getAttribute('href');
-if (!href || !href.startsWith('#')) return;
+  const href = e.currentTarget.getAttribute('href');
+  if (!href || !href.startsWith('#')) return;
 
-const section = document.querySelector(href);
+  const section = document.querySelector(href);
 
-if (!section) return;
+  if (!section) return;
 
-section.scrollIntoView({ behavior: 'smooth'});
+  section.scrollIntoView({ behavior: 'smooth'});
 
 
 };
@@ -273,3 +273,15 @@ modalClose.addEventListener('click', closeModal);
 
 
 
+
+
+const scrolltoBtns = document.querySelectorAll('[data-scrollto="editions"]');
+
+scrolltoBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const editionsSection = document.querySelector('#editions').offsetTop;
+    window.scrollTo({top: editionsSection, behavior: "smooth"});
+  });
+});
+
+//window.scrollTo({ testiwi, behavior: "smooth" });
