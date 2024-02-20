@@ -356,10 +356,10 @@ function handleBuyHeadphones() {
 
 
 
-const btnHeadphones = document.querySelector('[data-type="headphones"]'); //кнопка
-const modalHeadphones = document.querySelector('#modal2');
-const modal2Close = modalHeadphones.querySelector('#modal-close-2');
-const modal2Title =  modalHeadphones.querySelector('#headphones-edition');
+const buyHeadphonesBtn = document.querySelector('[data-type="headphones"]'); //кнопка
+const headphonesModal = document.querySelector('#modal2');
+const  headphonesModalClose = headphonesModal.querySelector('#modal-close-2');
+const headphonesModalTitle =  headphonesModal.querySelector('#headphones-edition');
 
 
 function handleBuyHeadphones() {
@@ -367,30 +367,29 @@ function handleBuyHeadphones() {
   const activeImage = document.querySelector('.headphones__image.active'); //активное фото
 
   if(activeImage) {
-    const activeColor = activeImage.getAttribute('data-color');
+    const activeColor = activeImage.getAttribute('data-color'); //orange, violet, black.
 
     const colors = {
       orange: 'var(--orange)',
       violet: 'var(--violet)',
       black: '#000'
     };
-
     overlay.classList.add(classes.opened);
-    modalHeadphones.classList.add(classes.opened);
+    headphonesModal.classList.add(classes.opened);
 
-    modal2Title.style.color = colors[activeColor];
-    modal2Title.innerHTML = `${activeColor} headphones`;
+    headphonesModalTitle.style.color = colors[activeColor];
+    headphonesModalTitle.innerHTML = `${activeColor} headphones`;
   }
 
-  modal2Close.addEventListener('click', function() {
+  headphonesModalClose.addEventListener('click', function() {
     overlay.classList.remove(classes.opened);
-    modalHeadphones.classList.remove(classes.opened);
+    headphonesModal.classList.remove(classes.opened);
   });
 
 };
 
 
-btnHeadphones.addEventListener('click', handleBuyHeadphones);
+buyHeadphonesBtn.addEventListener('click', handleBuyHeadphones);
 
 
 

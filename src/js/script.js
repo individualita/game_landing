@@ -303,6 +303,93 @@ btnsScrollTo.forEach(function(btn) {
 
 
 
+//открываем контент buy headphones with a game 
+/*const btnHeadphones = document.querySelector('[data-type="headphones"]');
+
+function handleBuyHeadphones() {
+
+  const  activeImage = document.querySelector('.headphones__image.active');
+  const activeColor = activeImage.getAttribute('data-color');
+
+  const modalHeadphones = document.querySelector('#modal2');
+  const close = document.querySelector('#modal-close-2'); 
+  const title = modalHeadphones.querySelector('#headphones-edition');
+  
+
+
+  if (activeImage) {
+
+    if(activeColor === 'orange') {
+      overlay.classList.add(classes.opened);
+      modalHeadphones.classList.add(classes.opened);
+      title.style.color ="var(--orange)"
+      title.innerHTML = `${activeColor} headphones`;
+    }
+
+    if(activeColor === 'violet') {
+      overlay.classList.add(classes.opened);
+      modalHeadphones.classList.add(classes.opened);
+      title.style.color ="var(--violet)"
+      title.innerHTML = `${activeColor} headphones`;
+    }
+
+    if(activeColor === 'black') {
+      overlay.classList.add(classes.opened);
+      modalHeadphones.classList.add(classes.opened);
+      title.style.color ="#000"
+      title.innerHTML = `${activeColor} headphones`;
+    }
+    
+
+  }
+
+  //close
+  close.addEventListener('click', function() {
+    overlay.classList.remove(classes.opened);
+    modalHeadphones.classList.remove(classes.opened);
+
+  });
+
+} */
+
+
+
+
+
+const buyHeadphonesBtn = document.querySelector('[data-type="headphones"]'); //кнопка
+const headphonesModal = document.querySelector('#modal2');
+const  headphonesModalClose = headphonesModal.querySelector('#modal-close-2');
+const headphonesModalTitle =  headphonesModal.querySelector('#headphones-edition');
+
+
+function handleBuyHeadphones() {
+
+  const activeImage = document.querySelector('.headphones__image.active'); //активное фото
+
+  if(activeImage) {
+    const activeColor = activeImage.getAttribute('data-color'); //orange, violet, black.
+
+    const colors = {
+      orange: 'var(--orange)',
+      violet: 'var(--violet)',
+      black: '#000'
+    };
+    overlay.classList.add(classes.opened);
+    headphonesModal.classList.add(classes.opened);
+
+    headphonesModalTitle.style.color = colors[activeColor];
+    headphonesModalTitle.innerHTML = `${activeColor} headphones`;
+  }
+
+  headphonesModalClose.addEventListener('click', function() {
+    overlay.classList.remove(classes.opened);
+    headphonesModal.classList.remove(classes.opened);
+  });
+
+};
+
+
+buyHeadphonesBtn.addEventListener('click', handleBuyHeadphones);
 
 
 
