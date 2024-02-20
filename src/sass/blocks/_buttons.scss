@@ -10,6 +10,9 @@
         box-shadow: 0 4px 8px rgba(136, 86, 217, 0.3);
         transform: translateY(-2px);
     }
+    &:focus {
+        outline: none; //убираем бордеры при фокусе. 
+    }
     &__main {
         width: 145px;
         height: 42px;

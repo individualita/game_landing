@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     z-index: 5;
-    top: 45px;
+    top: 0px;
     right: 0;
     left: 0;
     &.opened { //когда у хедера будет класс opened: 
@@ -22,6 +22,8 @@
     }
     &__wrapper {
         display: flex;
+        padding: 45px 0;
+        transition: padding .7s ease;
     }
 }
 
@@ -162,4 +164,13 @@
             width: 100%;
         }
     } */
+}
+
+.mini {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    .header__wrapper {
+        padding: 20px 0;
+        
+    }
 }

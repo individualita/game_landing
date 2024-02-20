@@ -76,6 +76,21 @@ link.addEventListener('click', scrollToSection)
 
 
 
+//добавление header mini при прокрутке вниз.
+window.addEventListener('scroll', function() {
+  const position = window.scrollY;
+  
+  if(position > 200) {
+    header.classList.add('mini');
+  }
+  else {
+    header.classList.remove('mini');
+  }
+
+});
+
+
+
 
 
 
@@ -283,4 +298,14 @@ btnsScrollTo.forEach(function(btn) {
     window.scrollTo({top: editionsSection, behavior: "smooth"});
   });
 });
+
+
+
+
+
+
+
+
+
+
 

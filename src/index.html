@@ -174,11 +174,11 @@
             <div class="title">Headphones</div>
             <div class="headphones__wrapper">
                 <div class="headphones__content">
-                    <p>You can also buy an exclusive headphones with  <span class="violet">The Last Of Us</span> theme for PS5</p>
-                    <p>If you purchase a heaphones and a game (any edition), you will receive a <span class="orange">15% </span>discount on two items.</p>
+                    <p>You can also buy an exclusive <span class="orange">headphones</span> with  <span class="violet">The Last Of Us Digital Deluxe Edition</span></p>
+                    <p>If you purchase a heaphones with Digital Deluxe Edition, you will receive a <span class="orange">15% </span>discount on two items.</p>
                     <div class="headphones__footer">
                         <div class="headphones__price">35.99$</div>
-                        <button class="button button__headphones">Buy headphones with a game</button>
+                        <button class="button button__headphones" data-type="headphones" >Buy headphones with a game</button>
                     </div>
                 </div>
                 <div class="headphones__images-inner">
@@ -504,6 +504,42 @@
                     <div class="modal__total">
                         <div class="modal__total-text">Your total sum:</div>
                         <div class="modal__total-price">19.99$</div>
+                    </div>
+                    <button class="button button__modal" type="submit">buy now</button>
+                </form>
+            </div>
+        </div>
+        <div class="modal" id="modal2">
+            <div class="modal__wrapper">
+                <div class="modal__close" id="modal-close-2">x</div>
+                <div class="modal__title">The Last Of Us 2 Digital Deluxe Edition</div>
+                <div class="modal__edition" id="headphones-edition">Red headphones</div>
+                <form class="modal__form" action="#">
+                    <div class="form__group full">
+                        <label for="card">credit card:</label>
+                        <input name ="card" type="text" id="card" required placeholder="0000 0000 0000 0000"> 
+                    </div>
+                    <div class="form__group">
+                        <label for="expire">expire:</label>
+                        <input name ="expire" type="text" id="expire" required placeholder="mm/yy">
+                    </div>
+                    <div class="form__group">
+                        <label for="ccv">ccv:</label>
+                        <input name ="ccv" type="text" id="ccv" required placeholder="***">
+                    </div>
+                    <div class="form__checkbox">
+                        <input type="checkbox" name="agreement" id="agreement" required>
+                        <span class="check"></span>
+                        <label for="agreement">I agree with the <a class="orange" target ="_blank" href="/rules.html">rules</a> of the site</label>
+                    </div>
+
+                    <div class="modal__description">
+                        Download of this product is subject to the PlayStation Network Terms of Service and our Software Usage Terms plus any specific additional conditions applying to this product. If you do not wish to accept these terms, do not download this product. See Terms of Service for more important information.
+                    </div>
+
+                    <div class="modal__total">
+                        <div class="modal__total-text">Your total sum:</div>
+                        <div class="modal__total-price">35.99$</div>
                     </div>
                     <button class="button button__modal" type="submit">buy now</button>
                 </form>
