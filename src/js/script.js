@@ -132,6 +132,7 @@ if (!isOpened) {
 } else {
   this.classList.remove(classes.opened);
   answerElement.classList.remove(classes.opened);
+  answerElement.style.maxHeight = 0;
   
 }
 
