@@ -227,14 +227,28 @@ inputCheckBoxes.forEach(function(checkbox) {
 
 
 
+//Скролл при нажатии на кнопки
+const btnsScrollTo = document.querySelectorAll('[data-scrollto="editions"]');
+
+btnsScrollTo.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const editionsSection = document.querySelector('#editions').offsetTop;
+    window.scrollTo({top: editionsSection, behavior: "smooth"});
+  });
+});
+
+
+
+
+
+
+
+
+
 
 
 
 //модалки. Добавили для каждой кнопки класс data-buy и атрибут. 
-
-
-
-
 const editionValues = [
   {
     price: 17.99,
@@ -250,7 +264,116 @@ const editionValues = [
   }
 ];
 
+//цвета для наушников
+const colors = {
+  orange: 'var(--orange)',
+  violet: 'var(--violet)',
+  black: '#000'
+};
 
+const buyButton = document.querySelectorAll('.buy-button');
+const modal = document.querySelector('.modal'); 
+const modalTitle = document.querySelector('.modal__edition'); 
+const modalPrice = document.querySelector('.modal__total-price');
+const modalClose = document.querySelector('.modal__close');
+const overlay = document.querySelector('.overlay');
+const buyHeadphonesBtn = document.querySelector('[data-type="headphones"]'); //кнопка покупки с наушниками
+
+const handleBuyButton = (event) => {
+
+  const value = event.target.dataset.value; // 0 1 2 buttons
+  //const alternativeValue = event.target.getAttribute('data-value'); альтернативный способ. 
+
+  if(!value) return; //если value нет, код останавливается. 
+
+  //деструктуризация. Получаем константу price и values исходя из массива editionValues[value]; Обращение по индексу [0, 1, 2]
+  const {price, title} = editionValues[value]; 
+
+  modalTitle.innerText = title;
+  modalTitle.style.color = '';
+  modalPrice.innerText = `${price} $`;
+
+  openModal();
+}
+
+function handleBuyHeadphones() {
+
+  const activeImage = document.querySelector('.headphones__image.active'); //активное фото
+
+  if(activeImage) {
+    const activeColor = activeImage.getAttribute('data-color'); //orange, violet, black.
+
+    openModal();
+
+    modalTitle.style.color = colors[activeColor];
+    modalTitle.innerHTML = `with ${activeColor} headphones`;
+    modalPrice.innerText = '35.99$'
+  }
+
+
+};
+
+function openModal () {
+  overlay.classList.add(classes.opened);
+  modal.classList.add(classes.opened);
+    //убираем пролистывание скролла
+    document.body.style.overflow = 'hidden';
+}
+function closeModal () {
+  modal.classList.remove(classes.opened);
+  overlay.classList.remove(classes.opened);
+  document.body.style.overflow = '';
+}
+
+
+
+buyButton.forEach(function(btn) {
+  btn.addEventListener('click', handleBuyButton);
+  
+})
+buyHeadphonesBtn.addEventListener('click', handleBuyHeadphones);
+modalClose.addEventListener('click', closeModal);
+
+//Закрытие модального окна кликом на overlay. 
+overlay.addEventListener('click', function(e) {
+  if (e.target === overlay) {
+    closeModal();
+  }
+})
+
+//закрытие модального окна кнопкой Esc
+document.addEventListener('keydown', function(e){
+  if (e.code === "Escape" && overlay.classList.contains(classes.opened)) {
+      closeModal();
+  }
+  
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+Старый код со 2 модалкой. 
 const buyButton = document.querySelectorAll('.buy-button');
 const modal = document.querySelector('.modal'); 
 const modalTitle = document.querySelector('.modal__edition'); 
@@ -272,11 +395,15 @@ const handleBuyButton = (event) => {
   modalPrice.innerText = `${price} $`;
   overlay.classList.add(classes.opened);
   modal.classList.add(classes.opened);
+
+  //убираем пролистывание скролла
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal () {
   modal.classList.remove(classes.opened);
   overlay.classList.remove(classes.opened);
+  document.body.style.overflow = '';
 }
 
 buyButton.forEach(function(btn) {
@@ -286,78 +413,25 @@ buyButton.forEach(function(btn) {
 
 modalClose.addEventListener('click', closeModal);
 
+/*
 
 
-
-
-
-const btnsScrollTo = document.querySelectorAll('[data-scrollto="editions"]');
-
-btnsScrollTo.forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    const editionsSection = document.querySelector('#editions').offsetTop;
-    window.scrollTo({top: editionsSection, behavior: "smooth"});
-  });
-});
-
-
-
-
-
-//открываем контент buy headphones with a game 
-/*const btnHeadphones = document.querySelector('[data-type="headphones"]');
-
-function handleBuyHeadphones() {
-
-  const  activeImage = document.querySelector('.headphones__image.active');
-  const activeColor = activeImage.getAttribute('data-color');
-
-  const modalHeadphones = document.querySelector('#modal2');
-  const close = document.querySelector('#modal-close-2'); 
-  const title = modalHeadphones.querySelector('#headphones-edition');
-  
-
-
-  if (activeImage) {
-
-    if(activeColor === 'orange') {
-      overlay.classList.add(classes.opened);
-      modalHeadphones.classList.add(classes.opened);
-      title.style.color ="var(--orange)"
-      title.innerHTML = `${activeColor} headphones`;
-    }
-
-    if(activeColor === 'violet') {
-      overlay.classList.add(classes.opened);
-      modalHeadphones.classList.add(classes.opened);
-      title.style.color ="var(--violet)"
-      title.innerHTML = `${activeColor} headphones`;
-    }
-
-    if(activeColor === 'black') {
-      overlay.classList.add(classes.opened);
-      modalHeadphones.classList.add(classes.opened);
-      title.style.color ="#000"
-      title.innerHTML = `${activeColor} headphones`;
-    }
-    
-
+//Закрытие модального окна кликом на overlay. 
+overlay.addEventListener('click', function(e) {
+  if (e.target === overlay) {
+    closeModal();
   }
-
-  //close
-  close.addEventListener('click', function() {
-    overlay.classList.remove(classes.opened);
-    modalHeadphones.classList.remove(classes.opened);
-
-  });
-
-} */
+})
 
 
 
 
 
-const buyHeadphonesBtn = document.querySelector('[data-type="headphones"]'); //кнопка
+
+
+
+
+/*const buyHeadphonesBtn = document.querySelector('[data-type="headphones"]'); //кнопка
 const headphonesModal = document.querySelector('#modal2');
 const  headphonesModalClose = headphonesModal.querySelector('#modal-close-2');
 const headphonesModalTitle =  headphonesModal.querySelector('#headphones-edition');
@@ -391,7 +465,7 @@ function handleBuyHeadphones() {
 
 
 buyHeadphonesBtn.addEventListener('click', handleBuyHeadphones);
-
+*/
 
 
 
