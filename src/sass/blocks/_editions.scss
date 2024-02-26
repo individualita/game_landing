@@ -21,6 +21,7 @@
         &:hover {
             transform: scale(1.05);
             box-shadow: 1px 1px 20px var(--violet);
+
         }
         img {
             object-fit: cover;
@@ -43,12 +44,13 @@
         color: var(--grey);
         font-size: 14px;
         line-height: 24px;
+        margin-bottom: 30px;
     }
     &__footer {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 14px;
+        justify-content: space-between;
+        align-items: center;
+        
     }
     &__price {
         color: var(--white);
