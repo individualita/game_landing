@@ -1,10 +1,36 @@
 .about {
-    padding-top: 4rem;
-    iframe {
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        height: 500px;
-        margin-top: 40px;
+    padding-top: 90px;
+    &__video {
+        position: relative;
+        margin-top: 32px;
+        video {
+            width: 70%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        &-btn {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: inline-block;
+            cursor: pointer;
+            background: var(--dark);
+            border-radius: 6px;
+            padding: 9px 26px;
+            font-weight: 500;
+            line-height: 16px;
+            color: var(--white);
+            transition: 1s all;
+            text-transform: uppercase;
+            &.hidden {
+                opacity: 0;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

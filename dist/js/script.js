@@ -216,18 +216,22 @@ inputCheckBoxes.forEach(function(checkbox) {
 
 
 
+
 //Скролл при нажатии на кнопки
-const btnsScrollTo = document.querySelectorAll('[data-scrollto="editions"]');
+const btnsScrollTo = document.querySelectorAll('[data-scrollto]');
 
 btnsScrollTo.forEach(function(btn) {
   btn.addEventListener('click', function() {
-    const editionsSection = document.querySelector('#editions').offsetTop;
-    window.scrollTo({top: editionsSection, behavior: "smooth"});
+
+    const btnData = btn.getAttribute('data-scrollto'); //editions, about.
+
+    const section = document.getElementById(btnData).offsetTop;
+
+    window.scrollTo({top: section, behavior: 'smooth'});
+
+
   });
 });
-
-
-
 
 
 
@@ -477,3 +481,27 @@ scrollToTopBtn.addEventListener('click', function() {
   window.scrollTo({top: 0, behavior: 'smooth'});
 });
 
+
+
+const videoButton = document.querySelector('.about__video-btn');
+const video = document.getElementById('video');
+
+let isPlay = false;
+
+const handleVideo = () => {
+  const info = videoButton.parentElement;
+  
+  isPlay = !isPlay;
+
+  if (isPlay) {
+    videoButton.classList.remove('hidden');
+    videoButton.innerText = "Pause";
+    video.play();
+  } else {
+    videoButton.classList.add('hidden');
+    videoButton.innerText = "Play";
+    video.pause();
+  }
+};
+
+videoButton.addEventListener('click', handleVideo);
