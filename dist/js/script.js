@@ -76,18 +76,7 @@ link.addEventListener('click', scrollToSection)
 
 
 
-//добавление header mini при прокрутке вниз.
-window.addEventListener('scroll', function() {
-  const position = window.scrollY;
-  
-  if(position > 200) {
-    header.classList.add('mini');
-  }
-  else {
-    header.classList.remove('mini');
-  }
 
-});
 
 
 
@@ -467,7 +456,24 @@ function handleBuyHeadphones() {
 buyHeadphonesBtn.addEventListener('click', handleBuyHeadphones);
 */
 
+//добавление header mini при прокрутке вниз и кнопки scrolltotop
+window.addEventListener('scroll', function() {
+  const position = window.scrollY;
+  
+  if(position > 200) {
+    header.classList.add('mini');
+    scrollToTopBtn.style.cssText = 'visibility: visible; opacity: 1;';
+  }
+  else {
+    header.classList.remove('mini');
+    scrollToTopBtn.style.cssText = 'visibility: hidden; opacity: 0;';
+  }
 
+});
 
+let scrollToTopBtn = document.querySelector('.pageup');
 
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+});
 
