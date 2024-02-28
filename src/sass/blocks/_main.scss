@@ -17,17 +17,22 @@
     &__wrapper {
         padding-top: 15rem; // 16px html * 15 = 240px;
     }
-    h1 {
+    &__title {
         color: var(--white);
         font-size: 90px;
         font-weight: 600;
         line-height: 100px;
+        width: 635px;
+        span {
+            display: block;
+            text-align: center;
+        }
     }
-    &__descr {
+    &__description {
         width: 580px;
         margin-top: 25px;
     }
-    &__btns {
+    &__buttons {
         display: flex;
         gap: 30px;
         margin-top: 10rem;
@@ -48,7 +53,7 @@
         svg {
             fill: var(--white);
         }
-        &-ps {
+        &-platform {
             svg {
                 width: 80px;
                 height: 130px;

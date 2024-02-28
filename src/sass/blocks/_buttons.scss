@@ -19,9 +19,9 @@
     }
     &__transparent {
         background: transparent;
-        border: 1px solid var(--white);
+        border: 1px solid var(--dark);
         &:hover {
-            box-shadow: 0 4px 8px rgba(136, 86, 217, 0.3);
+            box-shadow: 0 4px 8px rgba(136, 86, 217, 0.1);
         }
     }
     &__editions {
