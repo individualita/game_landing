@@ -4,7 +4,7 @@
         position: relative;
         margin-top: 32px;
         video {
-            width: 70%;
+            width: 100%;
             height: auto;
             margin: 0 auto;
             display: block;
@@ -16,10 +16,11 @@
             transform: translate(-50%, -50%);
             z-index: 2;
             display: inline-block;
+            width: 110px;
             cursor: pointer;
             background: var(--dark);
             border-radius: 6px;
-            padding: 9px 26px;
+            padding: 12px 28px;
             font-weight: 500;
             line-height: 16px;
             color: var(--white);

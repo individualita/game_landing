@@ -5,7 +5,7 @@
     right: 0;
     left: 0;
     &.opened { //когда у хедера будет класс opened: 
-        .hamburger {
+        .header__wrapper-btn {
             &::before,
             &::after {
                 width: 50%;
@@ -24,6 +24,36 @@
         display: flex;
         padding: 45px 0;
         transition: padding .7s ease;
+        &-btn {
+            position: relative;
+            display: inline-block;
+            width: 25px;
+            height: 16px;
+            cursor: pointer;
+            span {
+                display: block;
+                width: 50%;
+                background-color: var(--white);
+                height: 1px;
+                margin-top: 8px;
+                transition: width .8s ease;
+            }
+            &::before,
+            &::after {
+                content: '';
+                background-color: var(--white);
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                transition: width .8s ease;
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+        }
     }
 }
 
@@ -126,45 +156,6 @@
     }
 }
 
-.hamburger {
-    position: relative;
-    display: inline-block;
-    width: 25px;
-    height: 16px;
-    cursor: pointer;
-    span {
-        display: block;
-        width: 50%;
-        background-color: var(--white);
-        height: 1px;
-        margin-top: 8px;
-        transition: width .8s ease;
-    }
-    &::before,
-    &::after {
-        content: '';
-        background-color: var(--white);
-        height: 1px;
-        width: 100%;
-        position: absolute;
-        transition: width .8s ease;
-    }
-    &::before {
-        top: 0;
-    }
-    &::after {
-        bottom: 0;
-    }
-    /*&.active {
-        &::before,
-        &::after {
-            width: 50%;
-        }
-        span {
-            width: 100%;
-        }
-    } */
-}
 
 .mini {
     background: rgba(0, 0, 0, 0.1);

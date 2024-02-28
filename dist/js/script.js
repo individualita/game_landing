@@ -23,7 +23,7 @@ opened: 'opened',
 active: 'active'
 }
 
-const menuButton = document.querySelector('.hamburger');
+const menuButton = document.querySelector('.header__wrapper-btn');
 const header = document.querySelector('.header');
 const navLink = document.querySelectorAll('.nav__link');
 
@@ -32,7 +32,9 @@ const navLink = document.querySelectorAll('.nav__link');
 
 const toggleMenu = () => {
 header.classList.toggle(classes.opened)
+
 };
+menuButton.addEventListener('click', toggleMenu);
 
 /*const scrollToSection = (e) => { 
 e.preventDefault(); //отменяем действие браузера при клике чтобы не скакал. 
@@ -50,30 +52,63 @@ window.scrollTo({ top, behavior: "smooth"}); // Прокручиваем стр�
 
 */
 
-const scrollToSection = (e) => {
+/*const scrollToSection = (e) => {
   e.preventDefault();
+
+  navLink.forEach(function(link) {
+    link.classList.remove('nav__link-active');
+  })
 
   const href = e.currentTarget.getAttribute('href');
   if (!href || !href.startsWith('#')) return;
 
   const section = document.querySelector(href);
 
+  const currentLink = e.currentTarget;
+  currentLink.classList.add('nav__link-active');
+
   if (!section) return;
 
   section.scrollIntoView({ behavior: 'smooth'});
 
 
-};
+}; */
+
+
+function scrollToSection(e) {
+  e.preventDefault();
+
+  const currentTarget = e.currentTarget;
+  const href = currentTarget.getAttribute('href');
+
+  if (!href || !href.startsWith('#')) {
+    return;
+  }
+
+  const section = document.querySelector(href).offsetTop;
+
+  removeActiveClassFromLinks();
+
+  currentTarget.classList.add('nav__link-active');
+
+  if (!section) {
+    return;
+  }
+
+  window.scrollTo({top: section, behavior: 'smooth'});
+}
+function removeActiveClassFromLinks() {
+  navLink.forEach(function(link) {
+      link.classList.remove('nav__link-active');
+  });
+}
 
 
 
 
-menuButton.addEventListener('click', toggleMenu);
-
-navLink.forEach(link => { //это массив, на каждый элемент навешываем событие. 
-link.addEventListener('click', scrollToSection)
-}); 
-
+navLink.forEach(function(link) {
+  link.addEventListener('click', scrollToSection);
+});
 
 
 
