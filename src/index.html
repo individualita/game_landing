@@ -43,7 +43,7 @@
                 <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a class= "nav__link nav__link-active" href="#editions" aria-label="Scroll to editions Section">Editions</a>
+                            <a class= "nav__link nav__link-active" href="#versions" aria-label="Scroll to versions Section">Versions</a>
                         </li>
     
                         <li class="nav__item">
@@ -125,67 +125,87 @@
             </div>
         </div>
     </section>
-    <section class="editions" id="editions">
+    <section class="versions" id="versions">
         <div class="container">
-            <h2 class="title">Editions</h2>
-            <div class="editions__wrapper">
-                <div class="editions__item">
-                    <div class="editions__header">
-                        <img class="editions__image"src="../img/editionhorse.jpg" alt="edition img">
-                        <div class="editions__title">Standard Edition</div>
-                        <div class="editions__subtitle">PC</div>
-                    </div>
-                    <div class="editions__content">
-                        <ul class="editions__descr">
-                            <li>Offline play enabled</li>
-                            <li>Remote Play supported</li>
-                            <li>Trigger effect required</li>
-                        </ul>
-                        <div class="editions__footer">
-                            <div class="editions__price">17.99$</div>
-                            <button class="button button__editions buy-button" data-value="0">buy now</button>
+            <h2 class="title versions__title">Versions</h2>
+            <div class="versions__wrapper">
+                <div class="versions__item">
+                    <div class="versions__item-wrapper">
+                        <div class="versions__item-content active ">
+                            <div class="versions__image">
+                                <img class="versions__image"src="../img/editionhorse.jpg" alt="Ellie on a horse in winter weather">
+                            </div>
+                            <div class="versions__version">Standard Version</div>
+                            <div class="versions__platform">PC</div>
+                            <button class="versions__button-more" aria-label="Learn more about pc version"> read more...</button>
                         </div>
+                        
+                        <ul class="versions__list ">
+                            <li><span class="third-color">Graphics Enhancements: </span> The ability to customize graphics settings according to PC specifications, allowing players to achieve higher levels of detail and resolution.</li>
+                            <li><span class="third-color">Modding </span>The option to use community-made modifications to tailor the game to individual preferences.</li>
+                            <li><span class="third-color">Wide Range of Devices: </span> T Flexibility in choosing hardware components to optimize game performance.</li>
+                            <button class="versions__button versions__button-more" aria-label="Go back to the card">back</button>
+                        </ul>
+                    </div>
+
+                    <div class="versions__item-footer">
+                        <div class="versions__item-prices">
+                            <div class="versions__item__old-price">19.99$.</div>
+                            <div class="versions__item-price">17.99$</div>
+                        </div>
+                        <button class="button versions__button buy-button" aria-label="buy standard version" data-value="0">buy now</button>
                     </div>
                 </div>
-
-                <div class="editions__item">
-                    <div class="editions__header">
-                        <img class="editions__image"src="../img/editionellie.jpg" alt="edition img">
-                        <div class="editions__title">New Generation Edition</div>
-                        <div class="editions__subtitle">PS5</div>
-                    </div>
-                    <div class="editions__content">
-                        <ul class="editions__descr">
-                            <li>Offline play enabled</li>
-                            <li>Remote Play supported</li>
-                            <li>Trigger effect required</li>
-                        </ul>
-                        <div class="editions__footer">
-                            <div class="editions__price">19.99$</div>
-                            <button class="button button__editions buy-button" data-value="1">buy now</button>
+                <div class="versions__item">
+                    <div class="versions__item-wrapper">
+                        <div class="versions__item-content  active ">
+                            <div class="versions__image">
+                                <img class="versions__image"src="../img/editionellie.jpg" alt="Ellie is surrounded by enemies"">
+                            </div>
+                            <div class="versions__version">Standard PlayStation Version</div>
+                            <div class="versions__platform">PS4</div>
+                            <button class="versions__button-more" aria-label="Learn more about the standard version"> read more...</button>
                         </div>
+                        <ul class="versions__list ">
+                            <li><span class="third-color">Enhanced Graphics::</span> Support for higher resolution and improved graphics compared to the base PS4 version.</li>
+                            <li><span class="third-color">HDR: </span>The ability to use HDR technology for brighter and more vibrant colors on supported TVs.</li>
+                            <button class="versions__button versions__button-more" aria-label="Go back to the card">back</button>
+                        </ul>
+                    </div>
+                    <div class="versions__item-footer">
+                        <div class="versions__item-prices">
+                            <div class="versions__item__old-price">23.99$.</div>
+                            <div class="versions__item-price">19.99$</div>
+                        </div>
+                        <button class="button versions__button buy-button" aria-label="buy standard playstation version" data-value="1">buy now</button>
                     </div>
                 </div>
-
-                <div class="editions__item">
-                    <div class="editions__header">
-                        <img class="editions__image"src="../img/editioneliejoel.jpg" alt="edition img">
-                        <div class="editions__title">Digital Deluxe Edition</div>
-                        <div class="editions__subtitle">PS5</div>
-                    </div>
-                    <div class="editions__content">
-                        <ul class="editions__descr">
-                            <li>All features of Standard Edition</li>
-                            <li>Darkdale Armour </li>
-                            <li>Official digital soundtrack</li>
-                        </ul>
-                        <div class="editions__footer">
-                            <div class="editions__price">29.99$</div>
-                            <button class="button button__editions buy-button" data-value="2">buy now</button>
+                <div class="versions__item">
+                    <div class="versions__item-wrapper">
+                        <div class="versions__item-content active ">
+                            <div class="versions__image">
+                                <img class="versions__image"src="../img/editioneliejoel.jpg" alt="Ellie and Joel stand back to back">
+                            </div>
+                            <div class="versions__version">Digital Deluxe Version</div>
+                            <div class="versions__platform">PS5</div>
+                            <button class="versions__button-more" aria-label="Learn more digital deluxe version"> read more...</button>
                         </div>
+                        <ul class="versions__list ">
+                            <li><span class="third-color">Adaptive Feedback Control:</span> The capability to use the new features of the DualSense controller for a deeper interaction with the gameplay.</li>
+                            <li><span class="third-color">Faster Load Times: </span>Thanks to the faster NVMe SSD on the PS5, players can expect significantly shorter load times.</li>
+                            <li><span class="third-color">3D Audio Technology:</span> The ability to enjoy spatial 3D audio, enhancing the atmosphere and immersion in the game.</li>
+                            <button class="versions__button versions__button-more" aria-label="Go back to the card">back</button>
+                        </ul>
+                    </div>
+
+                    <div class="versions__item-footer">
+                        <div class="versions__item-prices">
+                            <div class="versions__item__old-price">29.99$.</div>
+                            <div class="versions__item-price">23.99$</div>
+                        </div>
+                        <button class="button versions__button buy-button" aria-label="buy standard version" data-value="2">buy now</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -198,7 +218,7 @@
                     <p>If you purchase a heaphones with Digital Deluxe Edition, you will receive a <span class="orange">15% </span>discount on two items.</p>
                     <div class="headphones__footer">
                         <div class="headphones__price">35.99$</div>
-                        <button class="button button__headphones" data-type="headphones" >Buy headphones with a game</button>
+                        <button class="button button__headphones" data-type="headphones" >Buy headphones with  game</button>
                     </div>
                 </div>
                 <div class="headphones__images-inner">
@@ -349,7 +369,7 @@
                 </div>
 
                 <div class="explore__content">
-                    <h3 class="explore__subtitle">The Last of Us II for PlayStation</h3>
+                    <h3 class="explore__subtitle">The Last of Us II for PlayStation platform</h3>
                     <div class="explore__switch">
                         <div class="explore__switch-title active" data-versions="standard">Standard</div>
                         <div class="explore__switch-checkbox">

@@ -280,15 +280,15 @@ btnsScrollTo.forEach(function(btn) {
 const editionValues = [
   {
     price: 17.99,
-    title: "Standard Edition",
+    title: "Standard Version",
   },
   {
     price: 19.99,
-    title: "Standard Edition New Generation",
+    title: "Standard PlayStation Version",
   },
   {
-    price: 29.99,
-    title: "Digital Deluxe Edition",
+    price: 23.99,
+    title: "Digital Deluxe Version",
   }
 ];
 
