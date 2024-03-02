@@ -3,7 +3,9 @@
     &__wrapper {
         margin-top: 4rem;
         display: flex;
+        flex-direction: row-reverse;
         justify-content: center;
+        align-items: center;
         gap: 150px;
     }
     &__content {
@@ -11,7 +13,7 @@
         padding-top: 2.3rem;
         font-size: 18px;
     }
-    p + p {
+    &__text + &__text {
         margin-top: 22px;
     }
     &__footer {
