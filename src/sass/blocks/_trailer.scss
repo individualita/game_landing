@@ -1,0 +1,61 @@
+.trailer {
+    padding-top: 90px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+        margin-top: 32px;
+    }
+    &__video {
+        position: relative;
+        grid-row: 1/3;
+        video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        &-btn {
+            display: inline-block;
+            padding: 12px 28px;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translate(-50%);
+            z-index: 2;
+            width: 110px;
+            background: transparent;
+            border: 1px solid var(--white);
+            border-radius: 6px;
+            font-weight: 500;
+            line-height: 16px;
+            color: var(--white);
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+            transition: 1s all;
+            &.hidden {
+                opacity: 0;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        &-first {
+            background: url('../img/trailerimg3.jpg') no-repeat center/cover;
+        }
+        &-second {
+            background: url('../img/trailerimg.webp') no-repeat center/cover;
+        }
+        &-text {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            color: var(--white);
+            font-size: 14px;
+        }
+    }
+}

@@ -14,7 +14,7 @@
         font-size: 18px;
     }
     &__text + &__text {
-        margin-top: 22px;
+        margin-top: 12px;
     }
     &__footer {
         display: flex;
@@ -59,10 +59,7 @@
             display: block;
         }
     }
-}
-
-.choose {
-    &__color {
+    &__buttons {
         margin-top: 50px;
         display: flex;
         flex-direction: column;
@@ -72,14 +69,14 @@
             display: flex;
             gap: 5px;
         }
-        &-text {
-            color: var(--white);
-            font-weight: 500;
-        }
+    }
+    &__color {
+        color: var(--white);
+        font-weight: 500;
         &-btn {
             width: 20px;
             height: 20px;
-            background-color: var(--orange);
+            background-color: var(--crab);
             cursor: pointer;
             &:focus {
                 outline: 1px solid var(--white);
@@ -94,6 +91,17 @@
             &:nth-of-type(3) {
                 background-color: var(--black);
             }
+            &:nth-of-type(4) {
+                background-color: var(--coyote);
+            }
+        }
+    }
+    &__button {
+        background: linear-gradient(135deg, #ff4136, #810700);
+        width: 274px;
+        height: 46px;
+        &:hover {
+            box-shadow: 0 4px 8px rgba(255, 65, 54, 0.3);
         }
     }
 }

@@ -15,10 +15,13 @@
         z-index: -1;
     }
     &__wrapper {
-        padding-top: 15rem; // 16px html * 15 = 240px;
+        padding-top: 10rem; // 16px html * 15 = 240px;
     }
     &__title {
-        color: var(--white);
+        color: transparent;
+        background: -webkit-linear-gradient(#ffc9a2, #db9a6a);
+        -webkit-background-clip: text;
+        background-clip: text;
         font-size: 90px;
         font-weight: 600;
         line-height: 100px;
@@ -30,12 +33,14 @@
     }
     &__description {
         width: 580px;
-        margin-top: 25px;
+        margin-top: 30px;
+        color: var(--white);
+        text-align: center;
     }
     &__buttons {
         display: flex;
         gap: 30px;
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
 
     &__icons {

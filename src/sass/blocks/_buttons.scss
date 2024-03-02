@@ -2,24 +2,24 @@
     width: 96px;
     height: 30px;
     border-radius: 6px;
-    background: linear-gradient(135deg, #8856d9, #412771);
+    background: linear-gradient(135deg, #9f231c, #ff4136 );
     text-transform: uppercase;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     &:hover {
-        box-shadow: 0 4px 8px rgba(136, 86, 217, 0.3);
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
         transform: translateY(-2px);
     }
     &:focus {
         outline: none; //убираем бордеры при фокусе. 
     }
     &__main {
-        width: 145px;
+        width: 200px;
         height: 42px;
     }
     &__transparent {
         background: transparent;
-        border: 1px solid var(--dark);
+        border: 1px solid var(--grey);
         &:hover {
             box-shadow: 0 4px 8px rgba(136, 86, 217, 0.1);
         }

@@ -9,7 +9,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        border-bottom: 2px solid var(--violet);
+        border-bottom: 2px solid var(--dark);
         padding: 10px 6px 6px;
         cursor: pointer;
         &.opened {
@@ -94,7 +94,7 @@
         &::before {
             content: '+';
             font-size: 32px;
-            color: var(--ocean);
+            color: var(--crab);
             transition: all .8s ease-out;
         }
     }

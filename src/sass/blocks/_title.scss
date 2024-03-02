@@ -1,5 +1,8 @@
 .title {
     color: var(--white);
+    background: -webkit-linear-gradient(#ffc9a2, #db9a6a);
+    background-clip: text;
+    color: transparent;
     font-size: 40px;
     font-weight: 600;
     text-align: center;

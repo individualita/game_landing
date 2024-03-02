@@ -5,7 +5,7 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 3,
-  spaceBetween: 25,
+  spaceBetween: 5,
   freeMode: true,
   // Navigation arrows
   navigation: {
@@ -170,7 +170,7 @@ header.addEventListener('click', toggleAccordion);
 
 
 const headphonesImages = document.querySelectorAll('.headphones__image');
-const headphonesBtns = document.querySelectorAll('.choose__color-btn');
+const headphonesBtns = document.querySelectorAll('.headphones__color-btn');
 
 
 function changeHeadphonesColor () {
@@ -294,9 +294,10 @@ const editionValues = [
 
 //цвета для наушников
 const colors = {
-  orange: 'var(--orange)',
+  crab: 'var(--crab)',
   violet: 'var(--violet)',
-  black: '#000'
+  black: 'var(--black)',
+  coyote: 'var(--coyote)'
 };
 
 const buyButton = document.querySelectorAll('.buy-button');
@@ -518,7 +519,7 @@ scrollToTopBtn.addEventListener('click', function() {
 
 
 
-const videoButton = document.querySelector('.about__video-btn');
+const videoButton = document.querySelector('.trailer__video-btn');
 const video = document.getElementById('video');
 
 let isPlay = false;

@@ -8,14 +8,16 @@
     --orange: #ff4136;
     --white: #fff;
     --black: #000;
+    --crab: #DE4242;
+    --coyote: #db9a6a;
 }
 
 .primary-color {
-    color: var(--violet);
+    color: var(--crab);
 }
 
 .secondary-color {
-    color: var(--orange);
+    color: var(--coyote);
 }
 
 .third-color {

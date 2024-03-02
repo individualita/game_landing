@@ -15,13 +15,13 @@
         flex-direction: column;
         justify-content: space-between;
         border-radius: 6px;
-        background: linear-gradient(180deg, #141615 0, #1c2023 100%);
+        background: linear-gradient(180deg, #141615 0, #1c2023 100%); 
         padding: 20px;
         overflow: hidden;
         transition: 0.5s all;
         &:hover {
             transform: scale(1.05);
-            box-shadow: 1px 1px 8px var(--violet);
+            box-shadow: 1px 1px 8px var(--grey);
         }
         &-wrapper {
             display: flex;
@@ -47,7 +47,7 @@
                 position: absolute;
                 height: 1px;
                 width: 100%;
-                background-color: var(--violet);
+                background-color: var(--dark);
                 top: -6px;
             }
         }
@@ -110,6 +110,7 @@
         }
     }
     &__button {
+        font-size: 14px;
         &-info,
         &-back {
             position: absolute;
@@ -119,7 +120,7 @@
             display: block;
             font-size: 14px;
             text-transform: uppercase;  
-            color: var(--violet);
+            color: var(--crab);
             cursor: pointer;
             &:focus {
                 outline: none;
