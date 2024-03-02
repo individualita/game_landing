@@ -4,7 +4,7 @@
         display: grid;
         justify-content: center;
         grid-template-columns: repeat(3, 350px);
-        grid-template-rows: minmax(460px, auto);
+        grid-template-rows: minmax(440px, auto);
         gap: 16px;
         grid-auto-columns: 350px;
         grid-auto-rows: minmax(460px, auto);
@@ -110,7 +110,8 @@
         }
     }
     &__button {
-        &-more {
+        &-info,
+        &-back {
             position: absolute;
             bottom: -45px;
             left: 50%;

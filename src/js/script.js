@@ -540,3 +540,34 @@ const handleVideo = () => {
 };
 
 videoButton.addEventListener('click', handleVideo);
+
+
+
+
+//reversecard script
+const versionItems = document.querySelectorAll('.versions__item');
+
+versionItems.forEach(function(item) {
+  item.addEventListener('click', function(e){
+
+  const readMoreButton = item.querySelector('.versions__button-info');
+  const cardContent = item.querySelector('.versions__item-content');
+  const cardList = item.querySelector('.versions__list');
+  const backButton = cardList.querySelector('.versions__button-back');
+
+  const target = e.target;
+
+  if(target === readMoreButton) {
+    cardContent.classList.remove(classes.active);
+    cardList.classList.add(classes.active);
+  }
+
+  if(target === backButton) {
+    cardContent.classList.add(classes.active);
+    cardList.classList.remove(classes.active);
+  }
+
+
+  });
+});
+
