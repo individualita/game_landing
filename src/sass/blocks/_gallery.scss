@@ -1,15 +1,12 @@
 .gallery{
-    padding-top: 6.5rem;
+    padding-top: 100px;
     &__wrapper {
-        display: flex;
-        
+        display: flex; 
     }
     &__item {
         width: 615px;
-        //max-height: 346px;
         height: 400px;
         padding: 10px;
-        /*overflow: hidden;*/
     }
     &__image {
         width: 100%;
@@ -45,7 +42,6 @@
         }
     };
 }
-
 
 .swiper {
     margin-top: 40px;

@@ -1,5 +1,5 @@
 .faq {
-    padding-top: 6.7rem;
+    padding-top: 105px;
     &__list {
         margin-top: 40px;
         display: flex;
@@ -40,44 +40,6 @@
             padding-top: 13px;
         }
     }
-    /*&__button {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border-radius: 6px;
-        background: linear-gradient(135deg, #8c96a0, #3b4f4a);
-        position: relative;
-        cursor: pointer;
-        &::before,
-        &::after  {
-            content: '';
-            width: 14px;
-            height: 2px;
-            background-color: var(--white);
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: transform 0.8s ease;
-
-        }
-        &::before {
-            top: 15px;
-            
-        }
-        &::after {
-            bottom: 13px;
-            transform: translate(-50%, -50%) rotate(90deg);
-            
-        }
-        &-active {
-            &::before {
-                transform: translateX(-50%) rotate(-45deg);
-            }
-            &::after {
-                transform: translateX(-50%) rotate(45deg);
-            }
-        }
-    }*/
     &__button {
         display: flex;
         justify-content: center;

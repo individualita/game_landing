@@ -103,7 +103,7 @@
             width: 50%;
         }
         &-active {
-            color: var(--crab);
+            color: var(--coyote);
         }
         &-lang {
             display: flex;
@@ -150,12 +150,10 @@
         cursor: pointer;
         color: rgba(255, 255, 255, 0.5);
         &:hover {
-            color: var(--crab);
+            color: var(--coyote);
         };
-        
     }
 }
-
 
 .mini {
     background: rgba(0, 0, 0, 0.1);

@@ -294,7 +294,7 @@ const editionValues = [
 
 //цвета для наушников
 const colors = {
-  crab: 'var(--crab)',
+  orange: 'var(--orange)',
   violet: 'var(--violet)',
   black: 'var(--black)',
   coyote: 'var(--coyote)'

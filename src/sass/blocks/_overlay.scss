@@ -23,7 +23,6 @@
     opacity: 0;
     visibility: hidden;
     width: 480px;
-    //min-height: 530px;
     background: var(--dark);
     border-radius: 8px;
     background: linear-gradient(180deg, #30373f 0%, #000000 100%);
@@ -107,7 +106,6 @@
         &.full {
             width: 100%;
         }
-
         label {
             display: block;
             font-weight: 400;

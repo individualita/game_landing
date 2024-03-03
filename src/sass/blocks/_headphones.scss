@@ -1,7 +1,7 @@
 .headphones {
-    padding-top: 3.5rem;
+    padding-top: 56px;
     &__wrapper {
-        margin-top: 4rem;
+        margin-top: 64px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
@@ -10,7 +10,7 @@
     }
     &__content {
         flex-basis: 425px;
-        padding-top: 2.3rem;
+        padding-top: 37px;
         font-size: 18px;
     }
     &__text + &__text {
@@ -41,7 +41,7 @@
             width: 195px;
             height: 119px;
             background: rgba(79, 96, 152, 0.8);
-            filter: blur(75px); //заблюриваем квадратик
+            filter: blur(75px); //заблюриваем квадрат
             position: absolute;
             top: 50%;
             left: 50%;
@@ -76,7 +76,7 @@
         &-btn {
             width: 20px;
             height: 20px;
-            background-color: var(--crab);
+            background-color: var(--orange);
             cursor: pointer;
             &:focus {
                 outline: 1px solid var(--white);
@@ -97,7 +97,7 @@
         }
     }
     &__button {
-        background: linear-gradient(135deg, #ff4136, #810700);
+        background: linear-gradient(135deg, #e32572, #4b2f2e);
         width: 274px;
         height: 46px;
         &:hover {

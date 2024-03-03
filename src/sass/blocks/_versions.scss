@@ -1,5 +1,5 @@
 .versions {
-    padding-top: 3.5rem;
+    padding-top: 56px;
     &__wrapper {
         display: grid;
         justify-content: center;
@@ -128,8 +128,6 @@
             &:hover {
                 text-decoration: underline;
             }
-
         }
     }
-   
 }
