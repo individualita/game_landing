@@ -572,3 +572,23 @@ versionItems.forEach(function(item) {
   });
 });
 
+
+
+//валидация форм. 
+
+const form = document.querySelector('.modal__form');
+
+form.addEventListener('submit', function(event) {
+
+   const cardInput = form.querySelector('#card');
+   const expireInput = form.querySelector('#expire');
+   const ccvInput = form.querySelector('#expire');
+   const agreementCheckbox = form.querySelector('#agreement');
+
+   if (!cardInput.value || !expireInput.value || !ccvInput.value || !agreementCheckbox.checked) {
+    alert('Please fill in all fields and agree to the terms.');
+    event.preventDefault(); // Останавливаем отправку формы
+  }
+
+});
+
