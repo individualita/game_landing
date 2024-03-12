@@ -28,13 +28,13 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        img {
+        &-img {
             width: 46px;
             height: 35px;
         }
-        span {
-            color: var(--grey);
-        }
+    }
+    &__date {
+        color: var(--grey);
     }
     &__rights {
         margin-top: 15px;
