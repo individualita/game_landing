@@ -23,7 +23,7 @@ opened: 'opened',
 active: 'active'
 }
 
-const menuButton = document.querySelector('.header__wrapper-btn');
+const menuButton = document.querySelector('.header__btn');
 const header = document.querySelector('.header');
 const navLink = document.querySelectorAll('.nav__link');
 
