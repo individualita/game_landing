@@ -391,4 +391,16 @@
             height: 400px;
         }
     }
+    .faq {
+        &__header {
+            gap: 5px;
+        }
+        &__question {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        &__answer {
+            font-size: 13px;
+        }
+    }
 }
