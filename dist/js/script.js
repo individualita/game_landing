@@ -5,7 +5,6 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 3,
-  spaceBetween: 5,
   freeMode: true,
   // Navigation arrows
   navigation: {

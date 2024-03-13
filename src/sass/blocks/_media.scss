@@ -2,6 +2,12 @@
     .container {
         max-width: 960px;
     }
+
+    .gallery {
+        &__item {
+            height: 300px;
+        }
+    }
 }
 @media (max-width: 992px) {
     .container {
@@ -30,10 +36,18 @@
             padding-top: 30vh;
         }
     }
+    .gallery {
+        &__item {
+            height: 280px;
+        }
+    }
 }
 
 
 @media (max-width:825px) {
+    .title {
+        font-size: 34px;
+    }
     .nav {
         &__list {
             margin-left: 55px;
@@ -102,6 +116,11 @@
         width: 180px;
         height: 40px;
     }
+    .gallery {
+        &__item {
+            height: 240px;
+        }
+    }
 
 }
 
@@ -149,10 +168,15 @@
                 height: 25px;
             }
         }
-
-        .button {
-            width: 120px;
-            font-size: 14px;
+    }
+    .button {
+        width: 120px;
+        font-size: 14px;
+    }
+    .gallery {
+        &__item {
+            padding: 5px;
+            height: 180px;
         }
     }
 }
