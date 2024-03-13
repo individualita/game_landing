@@ -56,9 +56,11 @@
             fill: var(--white);
         }
         &-platform {
+            width: 80px;
+            height: 130px;
             svg {
-                width: 80px;
-                height: 130px;
+                width: 100%;
+                height: 100%;
             }
         }
         &-social {
@@ -66,9 +68,13 @@
             flex-direction: column;
             gap: 30px;
             margin: auto 0;
+        }
+        &-link {
+            width: 50px;
+            height: 30px;
             svg {
-                width: 50px;
-                height: 30px;
+                width: 100%;
+                height: 100%;
                 transition: transform 0.6s ease;
                 &:hover {
                     transform: scale(1.2);
