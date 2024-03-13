@@ -4,8 +4,15 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 2,
   freeMode: true,
+  //autoplay: true,
+  //responsive 
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+    }
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.slider__btn-next',

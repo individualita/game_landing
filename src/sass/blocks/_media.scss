@@ -16,6 +16,11 @@
             grid-auto-rows: 420px;
         }
     }
+    .headphones {
+        &__wrapper {
+            gap: 100px;
+        }
+    }
 }
 @media (max-width: 992px) {
     .container {
@@ -61,8 +66,29 @@
                 transform: translateX(-300px);
             }
             &-descr {
-                margin-bottom: 4px;
+                font-size: 13px;
+                margin-bottom: 15px;
             }
+        }
+    }
+    .headphones {
+        &__wrapper {
+            gap: 15px;
+        }
+        &__images {
+            width: 300px;
+        }
+        &__content {
+            flex-basis: 400px;
+        }
+        &__price {
+            font-size: 25px;
+        }
+    }
+    .button {
+        &-headphones {
+            width: 240px;
+            font-size: 15px;
         }
     }
 }
@@ -80,6 +106,11 @@
     .main {
         &__title {
             width: 600px;
+        }
+    }
+    .headphones {
+        &__text + &__text {
+            margin-top: 10px;
         }
     }
 }
@@ -144,6 +175,9 @@
             height: 30px;
             font-size: 13px;
         }
+        &-headphones {
+            width: 230px;
+        }
     }
     .gallery {
         &__item {
@@ -163,10 +197,11 @@
             &.active {
                 transform: translateX(-300px);
             }
-            &-descr {
-                font-size: 13px;
-                margin-bottom: 15px;
-            }
+        }
+    }
+    .headphones {
+        &__wrapper {
+            flex-direction: column-reverse;
         }
     }
 
@@ -225,11 +260,20 @@
             font-size: 13px;
 
         }
+        &-headphones {
+            width: 200px;
+            font-size: 13px;
+        }
     }
     .gallery {
         &__item {
             padding: 5px;
             height: 180px;
+        }
+    }
+    .headphones {
+        &__price {
+            font-size: 20px;
         }
     }
 }
