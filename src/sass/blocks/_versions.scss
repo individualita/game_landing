@@ -5,7 +5,7 @@
         justify-content: center;
         grid-template-columns: repeat(3, 350px);
         grid-template-rows: minmax(440px, auto);
-        gap: 16px;
+        gap: 20px;
         grid-auto-columns: 350px;
         grid-auto-rows: minmax(460px, auto);
         margin-top: 32px;
@@ -92,7 +92,7 @@
         &.active {
             transform: translateX(-360px);
         }
-        li {
+        &-descr {
             position: relative;
             font-size: 14px;
             font-weight: 300; 
