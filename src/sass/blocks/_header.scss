@@ -4,6 +4,8 @@
     top: 0px;
     right: 0;
     left: 0;
+    padding: 35px 0;
+    transition: padding .7s ease;
     &.opened { //когда у хедера будет класс opened: 
         .header__btn {
             &::before,
@@ -20,13 +22,15 @@
             transition: opacity 1s, transform 1s;
         }
     }
-    &__wrapper {
-        display: flex;
-        padding: 45px 0;
-        transition: padding .7s ease;
+    &.mini {
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
     }
     &__btn {
-        position: relative;
+        position: absolute;
+        left: 95px;
+        top: 38px;
+        z-index: 10;
         display: inline-block;
         width: 25px;
         height: 16px;
@@ -58,6 +62,7 @@
 }
 
 .nav {
+    display: flex;
     transform: translateX(-200%);
     opacity: 0;
     transition: transform 1s ease;
@@ -66,7 +71,7 @@
         flex-wrap: wrap;
         gap: 35px;
         font-size: 14px;
-        margin-left: 100px;
+        padding-left: 100px;
     }
     &__link {
         text-transform: uppercase;
@@ -108,11 +113,3 @@
     }
 }
 
-.mini {
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    .header__wrapper {
-        padding: 20px 0;
-        
-    }
-}

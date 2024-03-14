@@ -40,7 +40,12 @@ const toggleMenu = () => {
 header.classList.toggle(classes.opened)
 
 };
+
 menuButton.addEventListener('click', toggleMenu);
+
+navLink.forEach(function(link) {
+  link.addEventListener('click', toggleMenu)
+});
 
 /*const scrollToSection = (e) => { 
 e.preventDefault(); //отменяем действие браузера при клике чтобы не скакал. 
