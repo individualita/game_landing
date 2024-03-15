@@ -251,7 +251,7 @@
     }
     .gallery {
         &__item {
-            height: 240px;
+            height: 250px;
         }
     }
     .versions {
@@ -317,9 +317,24 @@
         max-width: 100%;
         padding: 0 10px;
     }
+    .button {
+        width: 130px;
+        font-size: 14px;
+        padding: 5px;
+        &-mini {
+            width: 90px;
+            font-size: 13px;
+
+        }
+        &-headphones {
+            width: 200px;
+            font-size: 13px;
+        }
+    }
     .header {
         &__btn {
-            right: 10px;
+            right: 23px;
+            top: 25px;
         }
     }
     .main {
@@ -340,19 +355,6 @@
             gap: 20px;
         }
     }
-    .button {
-        width: 120px;
-        font-size: 14px;
-        &-mini {
-            width: 90px;
-            font-size: 13px;
-
-        }
-        &-headphones {
-            width: 200px;
-            font-size: 13px;
-        }
-    }
     .about {
         &__text {
             margin-top: 10px;
@@ -361,7 +363,7 @@
     .gallery {
         &__item {
             padding: 5px;
-            height: 180px;
+            height: 245px;
         }
     }
     .headphones {
@@ -375,14 +377,15 @@
     }
     .trailer {
         &__wrapper {
-            grid-template-rows: repeat(4, 1fr);
-            gap: 10px;
+            grid-template-rows: repeat(3, 250px);
+            gap: 5px;
         }
         &__video {
+            grid-row: 1/2;
             &-btn {
                 font-size: 14px;
                 padding: 2px 2px;
-                bottom: 0;
+
                 width: 80px;  
             }
         }
@@ -429,5 +432,20 @@
     .modal {
         width: 300px;
         padding: 10px;
+    }
+}
+
+@media (max-width: 440px) { 
+    .trailer {
+        &__video {
+            &-btn {
+                top: 70%;
+                bottom: auto;
+                right: 30px;
+            }
+        }
+    }
+    .modal {
+        top: 55%;
     }
 }
