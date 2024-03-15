@@ -4,7 +4,7 @@
     top: 0px;
     right: 0;
     left: 0;
-    padding: 35px 0;
+    padding: 25px 0;
     transition: padding .7s ease;
     &.opened { //когда у хедера будет класс opened: 
         .header__btn {
@@ -29,7 +29,7 @@
     &__btn {
         position: absolute;
         left: 95px;
-        top: 38px;
+        top: 28px;
         z-index: 10;
         display: inline-block;
         width: 25px;
