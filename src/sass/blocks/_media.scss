@@ -184,6 +184,7 @@
     }
     .nav {
         position: fixed;
+        display: flex;
         justify-content: center;
         align-items: center;
         &__list {
@@ -379,7 +380,7 @@
         &__video {
             &-btn {
                 font-size: 14px;
-                padding: 4px 22px;
+                padding: 2px 2px;
                 bottom: 0;
                 width: 80px;  
             }
@@ -423,5 +424,9 @@
         &__answer {
             font-size: 13px;
         }
+    }
+    .modal {
+        width: 300px;
+        padding: 10px;
     }
 }
