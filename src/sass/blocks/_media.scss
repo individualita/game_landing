@@ -374,6 +374,16 @@
             width: 250px;
             height: 200px;
         }
+        &__buttons {
+            &-list {
+                gap: 12px;
+            }
+        }
+        &__color {
+            &-btn {
+                width: 22px;
+            }
+        }
     }
     .trailer {
         &__wrapper {
@@ -437,6 +447,9 @@
 
 @media (max-width: 440px) { 
     .main {
+        &__wrapper {
+            padding-top: 20vh;
+        }
         &__buttons {
             margin-top: 40px;
         }
