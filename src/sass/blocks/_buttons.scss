@@ -43,7 +43,6 @@
     z-index: 999;
     bottom: 35px;
     right: 15%;
-    transform: rotate(180deg);
     visibility: hidden;
     opacity: 0;
     transition: all 1s ease;
@@ -54,7 +53,8 @@
     border: 1px solid var(--dark);
     border-radius: 4px;
     svg {
-        width: 25px;
+        fill: #fff;
+        width: 30px;
         height: 30px;
         transition: all 1s ease;
     }
