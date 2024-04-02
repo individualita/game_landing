@@ -6,6 +6,7 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   slidesPerView: 2,
   freeMode: true,
+  speed: 800,
   //autoplay: true,
   //responsive 
   breakpoints: {
