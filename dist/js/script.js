@@ -1,5 +1,4 @@
 //Swiper slider
-
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
@@ -41,8 +40,6 @@ const header = document.querySelector('.header');
 const navLink = document.querySelectorAll('.nav__link');
 
 
-
-
 const toggleMenu = () => {
 header.classList.toggle(classes.opened)
 
@@ -53,44 +50,6 @@ menuButton.addEventListener('click', toggleMenu);
 navLink.forEach(function(link) {
   link.addEventListener('click', toggleMenu)
 });
-
-/*const scrollToSection = (e) => { 
-e.preventDefault(); //отменяем действие браузера при клике чтобы не скакал. 
-const href = e.currentTarget.getAttribute('href'); //Получаем атрибут 'href' текущего элемента, на который кликнули.
-if(!href || !href.startsWith('#')) return; // Проверяем, существует ли атрибут 'href' и начинается ли он с решетки (#).startsWith применяется к строке. 
-
-//href - "#editions"
-const section = href.slice(1); //  // Вырезаем решетку из значения 'href', получаем строку с именем секции (например, "#editions" станет "editions").
-
-const top = document.getElementById(section)?.offsetTop; //Если секция найдена, получаем её вертикальное смещение относительно начала документа.
-
-window.scrollTo({ top, behavior: "smooth"}); // Прокручиваем страницу до верхней части указанной секции с плавным эффектом.
-
-};
-
-*/
-
-/*const scrollToSection = (e) => {
-  e.preventDefault();
-
-  navLink.forEach(function(link) {
-    link.classList.remove('nav__link-active');
-  })
-
-  const href = e.currentTarget.getAttribute('href');
-  if (!href || !href.startsWith('#')) return;
-
-  const section = document.querySelector(href);
-
-  const currentLink = e.currentTarget;
-  currentLink.classList.add('nav__link-active');
-
-  if (!section) return;
-
-  section.scrollIntoView({ behavior: 'smooth'});
-
-
-}; */
 
 
 function scrollToSection(e) {
@@ -131,22 +90,8 @@ navLink.forEach(function(link) {
 
 
 
-
-
-
-
-
 const faqHeader = document.querySelectorAll('.faq__header');
 const faqAnswer = document.querySelectorAll('.faq__answer');
-
-
-/*Реализация без закрытия остальных айтемов. 
-
-function toggleAccordion() {
-const answerElement = this.nextElementSibling;
-this.classList.toggle(classes.opened);
-answerElement.classList.toggle(classes.opened);
-} */
 
 
 function toggleAccordion() {
@@ -208,15 +153,6 @@ function changeHeadphonesColor () {
 headphonesBtns.forEach(function(btn) {
 btn.addEventListener('click', changeHeadphonesColor);
 });
-
-
-
-
-
-
-
-
-
 
 
 
@@ -294,7 +230,7 @@ btnsScrollTo.forEach(function(btn) {
 
 
 
-//модалки. Добавили для каждой кнопки класс data-buy и атрибут. 
+//Modals
 const editionValues = [
   {
     price: 17.99,
@@ -310,7 +246,7 @@ const editionValues = [
   }
 ];
 
-//цвета для наушников
+//Colors for headphones
 const colors = {
   orange: 'var(--orange)',
   violet: 'var(--violet)',
@@ -345,7 +281,7 @@ const handleBuyButton = (event) => {
 
 function handleBuyHeadphones() {
 
-  const activeImage = document.querySelector('.headphones__image.active'); //активное фото
+  const activeImage = document.querySelector('.headphones__image.active'); 
 
   if(activeImage) {
     const activeColor = activeImage.getAttribute('data-color'); //orange, violet, black.
@@ -400,119 +336,6 @@ document.addEventListener('keydown', function(e){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Старый код со 2 модалкой. 
-const buyButton = document.querySelectorAll('.buy-button');
-const modal = document.querySelector('.modal'); 
-const modalTitle = document.querySelector('.modal__edition'); 
-const modalPrice = document.querySelector('.modal__total-price');
-const modalClose = document.querySelector('.modal__close');
-const overlay = document.querySelector('.overlay');
-
-
-const handleBuyButton = (event) => {
-  const value = event.target.dataset.value; // 0 1 2 buttons
-  //const alternativeValue = event.target.getAttribute('data-value'); альтернативный способ. 
-
-  if(!value) return; //если value нет, код останавливается. 
-
-  //деструктуризация. Получаем константу price и values исходя из массива editionValues[value]; Обращение по индексу [0, 1, 2]
-  const {price, title} = editionValues[value]; 
-
-  modalTitle.innerText = title;
-  modalPrice.innerText = `${price} $`;
-  overlay.classList.add(classes.opened);
-  modal.classList.add(classes.opened);
-
-  //убираем пролистывание скролла
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal () {
-  modal.classList.remove(classes.opened);
-  overlay.classList.remove(classes.opened);
-  document.body.style.overflow = '';
-}
-
-buyButton.forEach(function(btn) {
-  btn.addEventListener('click', handleBuyButton);
-  
-})
-
-modalClose.addEventListener('click', closeModal);
-
-/*
-
-
-//Закрытие модального окна кликом на overlay. 
-overlay.addEventListener('click', function(e) {
-  if (e.target === overlay) {
-    closeModal();
-  }
-})
-
-
-
-
-
-
-
-
-
-/*const buyHeadphonesBtn = document.querySelector('[data-type="headphones"]'); //кнопка
-const headphonesModal = document.querySelector('#modal2');
-const  headphonesModalClose = headphonesModal.querySelector('#modal-close-2');
-const headphonesModalTitle =  headphonesModal.querySelector('#headphones-edition');
-
-
-function handleBuyHeadphones() {
-
-  const activeImage = document.querySelector('.headphones__image.active'); //активное фото
-
-  if(activeImage) {
-    const activeColor = activeImage.getAttribute('data-color'); //orange, violet, black.
-
-    const colors = {
-      orange: 'var(--orange)',
-      violet: 'var(--violet)',
-      black: '#000'
-    };
-    overlay.classList.add(classes.opened);
-    headphonesModal.classList.add(classes.opened);
-
-    headphonesModalTitle.style.color = colors[activeColor];
-    headphonesModalTitle.innerHTML = `${activeColor} headphones`;
-  }
-
-  headphonesModalClose.addEventListener('click', function() {
-    overlay.classList.remove(classes.opened);
-    headphonesModal.classList.remove(classes.opened);
-  });
-
-};
-
-
-buyHeadphonesBtn.addEventListener('click', handleBuyHeadphones);
-*/
 
 //добавление header mini при прокрутке вниз и кнопки scrolltotop
 window.addEventListener('scroll', function() {
@@ -592,7 +415,7 @@ versionItems.forEach(function(item) {
 
 
 
-//валидация форм. 
+//Form validation 
 
 const form = document.querySelector('.modal__form');
 
